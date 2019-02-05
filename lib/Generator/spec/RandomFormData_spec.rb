@@ -1,15 +1,19 @@
 require 'spec_helper'
 
-describe 'this rspec is to test RandomFormData' do 
+describe 'To test data from RandomFormData' do 
 
   before(:all) do
-    @movie_data = Generator.new.form_data
+    @random_data = Generator.new.form_data
   end
 
-  context 'testing the positive paths for the form' do 
+  context 'testing the expected results' do 
 
-    it '33' do
-      expect(@movie_data.first_name).to be_kind_of(String)
+    it 'should return first name as a string' do
+      expect(@random_data.first_name).to be_kind_of(String)
+    end
+
+    it 'should return last name as a string' do
+      expect(@random_data.first_name).to be_kind_of(String)
     end
 
   end

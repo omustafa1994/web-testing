@@ -1,4 +1,5 @@
 require 'selenium-webdriver'
+require_relative './Generator/Generator'
 
 class QatoolsForm
 
