@@ -47,5 +47,10 @@ describe 'testing the demoqa automation form' do
       expect(@driver.input_profession_button_value).to eq 'Automation Tester'
     end
 
+    it 'should select the selenium webdriver automation tool button' do
+      @driver.input_automation_tool_button
+      expect(@driver.input_automation_tool_button_value).to eq 'Selenium Webdriver'
+    end
+
   end
 end
