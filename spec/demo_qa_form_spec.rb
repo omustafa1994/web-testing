@@ -41,6 +41,11 @@ describe 'testing the demoqa automation form' do
       @driver.input_date_field(@date)
       expect(@driver.input_date_field_value).to eq @date
     end
-    
+
+    it 'should select the automation tester profession button' do
+      @driver.input_profession_button
+      expect(@driver.input_profession_button_value).to eq 'Automation Tester'
+    end
+
   end
 end

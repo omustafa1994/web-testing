@@ -10,6 +10,7 @@ class QatoolsForm
   GENDER_BUTTON = 'sex-1'
   EXPERIENCE_BUTTON = 'exp-4'
   DATE_FIELD = 'datepicker'
+  PROFESSION_BUTTON = 'profession-1'
 
   def initialize 
     @chrome_driver = Selenium::WebDriver.for :chrome 
@@ -61,6 +62,14 @@ class QatoolsForm
   
   def input_date_field_value
     @chrome_driver.find_element(:id, DATE_FIELD)['value']
+  end
+
+  def input_profession_button
+    @chrome_driver.find_element(:id, PROFESSION_BUTTON).click
+  end
+
+  def input_profession_button_value
+    @chrome_driver.find_element(:id, PROFESSION_BUTTON)['value']
   end
 
 end
