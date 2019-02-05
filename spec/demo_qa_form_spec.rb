@@ -16,7 +16,7 @@ describe 'testing the demoqa automation form' do
       expect(@driver.current_url).to eq @url
     end
 
-    it 'should accept a random first name' do
+    it 'should accept a random first name ' do
       @driver.input_firstname_field(@fname)
       expect(@driver.input_firstname_field_value).to eq @fname
     end
@@ -24,6 +24,11 @@ describe 'testing the demoqa automation form' do
     it 'should accept a random last name' do
       @driver.input_lastname_field(@lname)
       expect(@driver.input_lastname_field_value).to eq @lname
+    end
+
+    it 'should select the female gender button' do
+      @driver.input_gender_button
+      expect(@driver.input_gender_button_value).to eq 'Female'
     end
 
   end

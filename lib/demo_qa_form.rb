@@ -7,6 +7,7 @@ class QatoolsForm
   PRACTISE_FORM_URL = 'https://www.toolsqa.com/automation-practice-form'
   FIRST_NAME_FIELD_NAME = 'firstname'
   LAST_NAME_FIELD_NAME = 'lastname'
+  BUTTON = 'sex-1'
 
   def initialize 
     @chrome_driver = Selenium::WebDriver.for :chrome 
@@ -34,6 +35,14 @@ class QatoolsForm
 
   def input_lastname_field_value
     @chrome_driver.find_element(:name, LAST_NAME_FIELD_NAME)['value']
+  end
+
+  def input_gender_button
+    @chrome_driver.find_element(:id, BUTTON).click
+  end
+
+  def input_gender_button_value
+    @chrome_driver.find_element(:id, BUTTON)['value']
   end
 
 end

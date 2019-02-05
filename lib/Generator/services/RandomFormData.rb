@@ -10,4 +10,8 @@ class RandomFormData
     Faker::Name.last_name
   end
 
+  def random_boolean
+    rand(0..1)
+  end
+
 end
