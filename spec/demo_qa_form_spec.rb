@@ -31,5 +31,10 @@ describe 'testing the demoqa automation form' do
       expect(@driver.input_gender_button_value).to eq 'Female'
     end
 
+    it 'should select the 5 years experience button' do
+      @driver.input_experience_button
+      expect(@driver.input_experience_button_value).to eq '5'
+    end
+
   end
 end
