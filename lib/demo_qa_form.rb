@@ -27,9 +27,3 @@ class QatoolsForm
   end
 
 end
-
-# test = QatoolsForm.new
-# test.visit_practise_form
-# test.input_firstname_field('My name Jeff')
-# p test.input_firstname_field_value
-# sleep 5

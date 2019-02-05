@@ -9,7 +9,7 @@ describe 'testing the demoqa automation form' do
     @name = Faker::HarryPotter.character
   end
 
-  context 'testing the positive pahts for the form' do 
+  context 'testing the positive paths for the form' do 
 
     it 'should land on the registration demo form page' do 
       expect(@driver.current_url).to eq @url
