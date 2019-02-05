@@ -8,6 +8,7 @@ describe 'testing the demoqa automation form' do
     @url = 'https://www.toolsqa.com/automation-practice-form'
     @fname = Generator.new.form_data.first_name
     @lname = Generator.new.form_data.last_name
+    @date = Generator.new.form_data.recent_date.to_s #to string
   end
 
   context 'testing the positive paths for the form' do 
@@ -36,5 +37,10 @@ describe 'testing the demoqa automation form' do
       expect(@driver.input_experience_button_value).to eq '5'
     end
 
+    it 'should accept a random date' do 
+      @driver.input_date_field(@date)
+      expect(@driver.input_date_field_value).to eq @date
+    end
+    
   end
 end
