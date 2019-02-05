@@ -6,12 +6,12 @@ class RandomFormData
     Faker::Name.first_name
   end
 
-  def last_name# get a random last name
+  def last_name # get a random last name
     Faker::Name.last_name
   end
 
-  def random_boolean
-    rand(0..1)
+  def recent_date # get a random date in the past (up to 14 days)
+    Faker::Date.backward(14) #=> "Fri, 25 Jan 2019"
   end
 
 end

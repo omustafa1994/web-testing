@@ -16,5 +16,9 @@ describe 'To test data from RandomFormData' do
       expect(@random_data.first_name).to be_kind_of(String)
     end
 
+    it 'should return a date as a Date' do
+      expect(@random_data.recent_date).to be_kind_of(Date)
+    end
+
   end
 end
