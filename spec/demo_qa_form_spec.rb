@@ -52,5 +52,10 @@ describe 'testing the demoqa automation form' do
       expect(@driver.input_automation_tool_button_value).to eq 'Selenium Webdriver'
     end
 
+    it 'should select europe from the dropdown menu' do
+      @driver.select_dropdown
+      expect(@driver.select_dropdown_value).to eq "Europe"
+    end
+
   end
 end

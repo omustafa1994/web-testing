@@ -13,6 +13,7 @@ class QatoolsForm
   PROFESSION_BUTTON = 'profession-1'
   PIC_BUTTON = 'photo'
   AUTO_TOOL_BUTTON = 'tool-2'
+  CONTINENTS = 'continents'
 
   def initialize 
     @chrome_driver = Selenium::WebDriver.for :chrome 
@@ -84,6 +85,15 @@ class QatoolsForm
 
   def input_automation_tool_button_value
     @chrome_driver.find_element(:id, AUTO_TOOL_BUTTON)['value']
+  end
+
+  def select_dropdown
+    @select = @chrome_driver.find_element(:id, CONTINENTS)
+    @select.find_element(:css, "option:nth-child(2)").click 
+  end
+
+  def select_dropdown_value
+    @chrome_driver.find_element(:id, CONTINENTS)['value']
   end
 
 end
