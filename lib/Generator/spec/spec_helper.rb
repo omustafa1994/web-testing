@@ -1,6 +1,5 @@
-require 'selenium-webdriver'
 require 'faker'
-require_relative '../lib/demo_qa_form'
+require_relative '../Generator'
 
 RSpec.configure do |config|
   config.formatter = :documentation
