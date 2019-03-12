@@ -1,5 +1,4 @@
-# Demo QA Form 
-## with Generator
+# Demo QA Form (with Generator)
 
 ### Description
 This is a test-framework which uses selenium automation to auto-fill/select values on the site https://www.toolsqa.com.
